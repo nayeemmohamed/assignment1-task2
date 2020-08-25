@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Audio player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/AudioPlayer.css">
+    <style>
+body{
+  animation: mymove 5s infinite;
+}
+@keyframes mymove {
+  0%{background-color: rgb(6, 126, 238);}
+  20% {background-color: rgb(6, 85, 255);}
+  40% {background-color: rgb(47, 75, 151);}
+  60% {background-color: rgb(3, 113, 128);}
+  80% {background-color: rgb(157, 57, 250);}
+  100% {background-color: rgb(31, 118, 250);}
+}
+    #player{
+        position: relative;
+        max-width: 70%;
+        right: 0;
+        bottom: 0;
+        left: 13%;
+        height: 500px;
+        top:10px;
+        border: solid 1px rgb(75, 75, 75);
+        border-radius: 25px;
+        background-image: url(./images/music.png);
+        background-size: cover;
+    }
+    .new-ap{height: 100px;}
+    </style>
+  </head>
+
+  <body>
+    
+      <!-- Audio player container-->
+     <div id='player'></div>
+     
+
+    <!-- Audio player js begin-->
+    <script src="js/AudioPlayer.js"></script>
+
+    <script>
+        // test image for web notifications
+        var iconImage = null;
+
+        MYMUSICPLAYER.onInitialize({
+            container:'#player',
+            volume   : 0.7,
+            autoPlay : true,
+            notification: false,
+            playList: [
+                {
+                  'icon': iconImage, 
+                  'title': 'Kaise Hua', 
+                  'file': 'mp3/Kaise Hua.mpeg', 
+                  'artist': 'Vishal Mishra',
+                  'description':'A song from the movie Kabir Singh starring Shahid Kapoor and Kiara Advani'
+                },
+                {
+                  'icon': iconImage, 
+                  'title': 'Duniyaa', 
+                  'file': 'mp3/Duniya.mpeg', 
+                  'artist': 'Akhil & Dhvani Bhanushali',
+                  'description':'A romantic melody from the movie luka chuppi'
+                },
+                {
+                  'icon': iconImage, 
+                  'title': 'Ishq wala love', 
+                  'file': 'mp3/Ishq wala Love.mpeg', 
+                  'artist': 'Shekhar Ravjiani, Salim Merchant & Neeti Mohan',
+                  'description':'A track from the movie student of the year starring Alia Bhatt, Siddharth Malhotra and Varun Dhawan in their first movie'
+                },
+                {
+                  'icon': iconImage,
+                  'title': 'Raabta', 
+                  'file': 'mp3/Rabbta.mpeg', 
+                  'artist': 'Arijit Singh and Joy',
+                  'description':'Starring Kareena and Saif from the movie Agent Vinod comes a melodious track'
+
+                },
+                {
+                  'icon': iconImage,
+                  'title': 'A Thousand Years',
+                  'file': 'mp3/A Thousand Years.mpeg', 
+                  'artist': 'Christina Perri Feat. Steve Kazee',
+                  'description':'A track from the final movie of the Twilight saga'
+                }
+          ]
+        });
+    </script>
+    <!-- Audio player js end-->
+
+  </body>
+</html>

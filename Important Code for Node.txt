@@ -1,0 +1,23 @@
+:\Apps\Player>npm -v
+6.14.5
+
+E:\Apps\Player>npm install connect serve-static
+npm WARN saveError ENOENT: no such file or directory, open 'E:\Apps\Player\package.json'
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN enoent ENOENT: no such file or directory, open 'E:\Apps\Player\package.json'
+npm WARN Player No description
+npm WARN Player No repository field.
+npm WARN Player No README data
+npm WARN Player No license field.
+
++ connect@3.7.0
++ serve-static@1.14.1
+added 25 packages from 18 contributors and audited 25 packages in 3.78s
+found 0 vulnerabilities
+
+
+E:\Apps\Player>node server.js
+Server running on 8080...
+^C
+E:\Apps\Player>node server.js
+Server running on 8080...
